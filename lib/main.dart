@@ -15,121 +15,121 @@ class _MyAppState extends State<MyApp> {
       debugShowCheckedModeBanner: false,
       title: 'Material App',
       home: Scaffold(
-        body: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            SizedBox(
-              height: 20,
-            ),
-            Padding(
-              padding: const EdgeInsets.only(left: 25, top: 10, bottom: 10),
-              child: Text(
-                "Premiers",
-                style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+          body: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              SizedBox(
+                height: 20,
               ),
-            ),
-            SizedBox(
-                height: 260,
-                child: PageView(scrollDirection: Axis.horizontal, pageSnapping: true, children: <Widget>[
-                  CardFav("assets/10.jpg", "Big Hero 6", "2014", "4.5"),
-                  CardFav("assets/11.png", "Frozen 2", "2019", "4.4"),
-                  CardFav("assets/10.jpg", "Big Hero 6", "2014", "4.5"),
-                  CardFav("assets/11.png", "Frozen 2", "2019", "4.4"),
-                  CardFav("assets/10.jpg", "Big Hero 6", "2014", "4.5"),
-                  CardFav("assets/11.png", "Frozen 2", "2019", "4.4"),
-                ])),
-            Padding(
-              padding: const EdgeInsets.only(left: 25, top: 10, bottom: 10),
-              child: Text(
-                "In this week",
-                style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, top: 10, bottom: 10),
+                child: Text(
+                  "Premiers",
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
+                ),
               ),
-            ),
-            Expanded(
-              flex: 10,
-              child: ListView(scrollDirection: Axis.vertical, children: <Widget>[
-                listCard("assets/1.jpg", "Abominable", "4.3", "2019", "Tito Predovic", "110"),
-                listCard("assets/2.jpg", "How to train your dragon", "3.3", "2019", "Jacynthe Lubowits", "110"),
-                listCard("assets/3.jpg", "Speakers", "4.6", "2020", "Irene Amato", "110"),
-                listCard("assets/4.png", "Birds of prey", "5.0", "2019", "Tito Predovic", "110"),
-                listCard("assets/1.jpg", "Abominable", "4.3", "2019", "Tito Predovic", "110"),
-                listCard("assets/2.jpg", "How to train your dragon", "3.3", "2019", "Jacynthe Lubowits", "110"),
-                listCard("assets/3.jpg", "Speakers", "4.6", "2020", "Irene Amato", "110"),
-                listCard("assets/4.png", "Birds of prey", "5.0", "2019", "Tito Predovic", "110"),
-                listCard("assets/1.jpg", "Abominable", "4.3", "2019", "Tito Predovic", "110"),
-                listCard("assets/2.jpg", "How to train your dragon", "3.3", "2019", "Jacynthe Lubowits", "110"),
-                listCard("assets/3.jpg", "Speakers", "4.6", "2020", "Irene Amato", "110"),
-                listCard("assets/4.png", "Birds of prey", "5.0", "2019", "Tito Predovic", "110"),
-                listCard("assets/1.jpg", "Abominable", "4.3", "2019", "Tito Predovic", "110"),
-                listCard("assets/2.jpg", "How to train your dragon", "3.3", "2019", "Jacynthe Lubowits", "110"),
-                listCard("assets/3.jpg", "Speakers", "4.6", "2020", "Irene Amato", "110"),
-                listCard("assets/4.png", "Birds of prey", "5.0", "2019", "Tito Predovic", "110"),
-              ]),
-            ),
-          ],
-        ),
-        bottomNavigationBar: BottomNavigationBar(
-          onTap: (i) {
-            setState(() {
-              index = i;
-            });
-          },
-          showSelectedLabels: false,
-          showUnselectedLabels: false,
-          currentIndex: index,
-          items: [
-            BottomNavigationBarItem(
-                activeIcon: Icon(
-                  Icons.ondemand_video,
-                  color: Colors.purple.shade700,
-                  size: 35,
+              SizedBox(
+                  height: 260,
+                  child: PageView(scrollDirection: Axis.horizontal, pageSnapping: true, children: <Widget>[
+                    CardFav("assets/10.jpg", "Big Hero 6", "2014", "4.5"),
+                    CardFav("assets/11.png", "Frozen 2", "2019", "4.4"),
+                    CardFav("assets/10.jpg", "Big Hero 6", "2014", "4.5"),
+                    CardFav("assets/11.png", "Frozen 2", "2019", "4.4"),
+                    CardFav("assets/10.jpg", "Big Hero 6", "2014", "4.5"),
+                    CardFav("assets/11.png", "Frozen 2", "2019", "4.4"),
+                  ])),
+              Padding(
+                padding: const EdgeInsets.only(left: 25, top: 10, bottom: 10),
+                child: Text(
+                  "In this week",
+                  style: TextStyle(color: Colors.black, fontWeight: FontWeight.bold, fontSize: 20),
                 ),
-                icon: Icon(
-                  Icons.ondemand_video,
-                  color: Colors.black12,
-                  size: 35,
-                ),
-                title: Text('')),
-            BottomNavigationBarItem(
-                activeIcon: Icon(
-                  Icons.camera_roll_outlined,
-                  color: Colors.purple.shade700,
-                  size: 35,
-                ),
-                icon: Icon(
-                  Icons.camera_roll_outlined,
-                  color: Colors.black12,
-                  size: 35,
-                ),
-                title: Text('')),
-            BottomNavigationBarItem(
-                activeIcon: Icon(
-                  Icons.search,
-                  color: Colors.purple.shade700,
-                  size: 35,
-                ),
-                icon: Icon(
-                  Icons.search,
-                  color: Colors.black12,
-                  size: 35,
-                ),
-                title: Text('')),
-            BottomNavigationBarItem(
-                activeIcon: Icon(
-                  Icons.format_align_justify,
-                  color: Colors.purple.shade700,
-                  size: 35,
-                ),
-                icon: Icon(
-                  Icons.format_align_justify,
-                  color: Colors.black12,
-                  size: 35,
-                ),
-                title: Text('')),
-          ],
-        ),
-      ),
+              ),
+              Expanded(
+                flex: 10,
+                child: ListView(scrollDirection: Axis.vertical, children: <Widget>[
+                  listCard("assets/1.jpg", "Abominable", "4.3", "2019", "Tito Predovic", "110"),
+                  listCard("assets/2.jpg", "How to train your dragon", "3.3", "2019", "Jacynthe Lubowits", "110"),
+                  listCard("assets/3.jpg", "Speakers", "4.6", "2020", "Irene Amato", "110"),
+                  listCard("assets/4.png", "Birds of prey", "5.0", "2019", "Tito Predovic", "110"),
+                  listCard("assets/1.jpg", "Abominable", "4.3", "2019", "Tito Predovic", "110"),
+                  listCard("assets/2.jpg", "How to train your dragon", "3.3", "2019", "Jacynthe Lubowits", "110"),
+                  listCard("assets/3.jpg", "Speakers", "4.6", "2020", "Irene Amato", "110"),
+                  listCard("assets/4.png", "Birds of prey", "5.0", "2019", "Tito Predovic", "110"),
+                  listCard("assets/1.jpg", "Abominable", "4.3", "2019", "Tito Predovic", "110"),
+                  listCard("assets/2.jpg", "How to train your dragon", "3.3", "2019", "Jacynthe Lubowits", "110"),
+                  listCard("assets/3.jpg", "Speakers", "4.6", "2020", "Irene Amato", "110"),
+                  listCard("assets/4.png", "Birds of prey", "5.0", "2019", "Tito Predovic", "110"),
+                  listCard("assets/1.jpg", "Abominable", "4.3", "2019", "Tito Predovic", "110"),
+                  listCard("assets/2.jpg", "How to train your dragon", "3.3", "2019", "Jacynthe Lubowits", "110"),
+                  listCard("assets/3.jpg", "Speakers", "4.6", "2020", "Irene Amato", "110"),
+                  listCard("assets/4.png", "Birds of prey", "5.0", "2019", "Tito Predovic", "110"),
+                ]),
+              ),
+            ],
+          ),
+          bottomNavigationBar: BottomNavigationBar(
+            onTap: (i) {
+              setState(() {
+                index = i;
+              });
+            },
+            showSelectedLabels: false,
+            showUnselectedLabels: false,
+            selectedItemColor: Colors.amber,
+            currentIndex: index,
+            items: [
+              BottomNavigationBarItem(
+                  activeIcon: Icon(
+                    Icons.ondemand_video,
+                    color: Colors.purple.shade700,
+                    size: 35,
+                  ),
+                  icon: Icon(
+                    Icons.ondemand_video,
+                    color: Colors.black12,
+                    size: 35,
+                  ),
+                  title: Text('')),
+              BottomNavigationBarItem(
+                  activeIcon: Icon(
+                    Icons.camera_roll_outlined,
+                    color: Colors.purple.shade700,
+                    size: 35,
+                  ),
+                  icon: Icon(
+                    Icons.camera_roll_outlined,
+                    color: Colors.black12,
+                    size: 35,
+                  ),
+                  title: Text('')),
+              BottomNavigationBarItem(
+                  activeIcon: Icon(
+                    Icons.search,
+                    color: Colors.purple.shade700,
+                    size: 35,
+                  ),
+                  icon: Icon(
+                    Icons.search,
+                    color: Colors.black12,
+                    size: 35,
+                  ),
+                  title: Text('')),
+              BottomNavigationBarItem(
+                  activeIcon: Icon(
+                    Icons.format_align_justify,
+                    color: Colors.purple.shade700,
+                    size: 35,
+                  ),
+                  icon: Icon(
+                    Icons.format_align_justify,
+                    color: Colors.black12,
+                    size: 35,
+                  ),
+                  title: Text('')),
+            ],
+          )),
     );
   }
 
@@ -175,12 +175,6 @@ class _MyAppState extends State<MyApp> {
                         ),
                       ),
                     )
-                    // Center(
-                    //   child: Text(
-                    //     "4.5",
-                    //     style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
-                    //   ),
-                    // ),
                   ])),
               Expanded(
                   // flex: 12,
