@@ -79,6 +79,9 @@ class _MyAppState extends State<MyApp> {
             showUnselectedLabels: false,
             selectedItemColor: Colors.amber,
             currentIndex: index,
+            type: BottomNavigationBarType.fixed,
+            selectedFontSize: 12,
+            unselectedFontSize: 12,
             items: [
               BottomNavigationBarItem(
                   activeIcon: Icon(
